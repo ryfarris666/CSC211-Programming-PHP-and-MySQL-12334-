@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Feedback Form</title>
+</head>
+<body>
+<!-- Script 3.1 - feedback.html -->
+<div><p>Please complete this form to submit your feedback:</p>
+
+<form action="handle_form.php" method="post">
+
+	<p>Name: <select name="title" required>
+	<option value="Mr.">Mr.</option>
+	<option value="Mrs.">Mrs.</option>
+	<option value="Ms.">Ms.</option>
+	</select> <input type="text" name="name" size="20" required></p>
+
+	<p>Email Address: <input type="email" name="email" size="20" required></p>
+
+	<p>Response: This is...	
+	<input type="radio" name="response" value="excellent" required> excellent
+	<input type="radio" name="response" value="okay"> okay
+	<input type="radio" name="response" value="boring"> boring</p>
+
+	<p>Comments: <textarea name="comments" rows="3" cols="30" required></textarea></p>
+
+	<input type="submit" name="submit" value="Send My Feedback">
+
+</form>
+// where we add form
+</div>
+<h3>Form Method Explation<h3>
+<p><strong>Method="post" means:</strong> Form data is sent inside the HTTP request body, 
+making it invisible in the URL. This approach has no size limitations for data, 
+prevents bookmarking form submissions, and provides better security for sensitive 
+information like passwords and personal details.</p>
+
+<p><strong>Contrast with method = “get”:</strong>With GET, data is appended to the URL as name/value pairs, 
+making it visible in the browser. It’s limited to 3000 characters, allows users to 
+bookmark results, but shouldn’t be used for sensitive data like passwords due to its 
+visibility.</p>
+</body>
+</html>
