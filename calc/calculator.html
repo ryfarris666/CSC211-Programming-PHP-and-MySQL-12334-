@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Product Cost Calculator</title>
+</head>
+<body><!-- Script 4.1 - calculator.html -->
+<div><p>Fill out this form to calculate the total cost:</p>
+<p><strong>Use these values:</strong><br>
+Price: 19.95 | Quantity: 6 | Discount: $5.00 | Tax: 8.6%</p>
+
+<form action="handle_calc.php" method="POST"</form>
+
+<p>Price: <input type="text" name="price" size="5" value="19.95"></p>
+
+<p>Quantity: <input type="number" name="quantity" size="5" min="1" value="1"></p>
+
+<p>Discount: <input type="text" name="discount" size="5"></p>
+
+<p>Tax: <input type="text" name="tax" size="5"> (%)</p>
+
+<input type="submit" name="submit" value="Calculate!">
+
+</form>
+</div>
+</body>
+</html>
