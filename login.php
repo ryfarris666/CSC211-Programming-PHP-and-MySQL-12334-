@@ -17,6 +17,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 		if ( (strtolower($_POST['email']) == 'me@example.com') && ($_POST['password'] == 'testpass') ) { // Correct!
 
+// do session stuff:
+session_start();
+$_SESSION['email'] =
+$_POST['eamil'];
+$_SESSION['loggedin'] = time();
+
 // redirect the user to the welcome page!
 ob_end_clean(); //destroy the buffer!
 header('Location: welcome.php');
