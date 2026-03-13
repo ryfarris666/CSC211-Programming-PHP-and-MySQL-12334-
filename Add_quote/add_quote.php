@@ -18,8 +18,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	
 	if (is_writable($file)) {
 	//confirm file writeable
-			
-			file_put_contents($file, $_POST['quote'] . PHP_EOL, FILE_APPEND); 
+			file_put_contents($file, $_POST['quote'] . PHP_EOL, FILE_APPEND | LOCK_EX);
+			//write the data
 
 			// print a message:
 			print '<p>Your quotation has been stored.</p>';
