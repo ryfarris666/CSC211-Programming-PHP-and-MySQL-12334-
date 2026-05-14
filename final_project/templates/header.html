@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="HandheldFriendly" content="True">
+<title><?php
+if (defined('Title')) {
+print Title;
+} else {
+print 'My Final Project';
+}
+?></title>
+<link rel="stylesheet" type="text/css" media="screen" href="css/concise.min.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="css/masthead.css" />
+<style>
+.error { color: red; font-weight: bold; }
+.success { color: green; font-weight: bold; }
+table { border-collapse: collapse; width: 100%; }
+th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+th { background-color: #f2f2f2; }
+
+/*edit link styles*/
+.edit-link {
+    color: blue;
+    margin-right: 10px;
+    text-decoration: none;
+}
+.edit-link:hover {
+    text-decoration: underline;
+}
+
+/* MEDICAL SYMBOL BACKGROUND */
+body {
+    background-image: url('images/medical_symbol.png');
+    background-repeat: repeat;
+    background-size: 150px;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+/* Make content readable over background */
+.siteContent, main {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 25px;
+    border-radius: 8px;
+    margin: 20px auto;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* FIX: Center the content and limit width */
+.siteContent {
+    max-width: 800px;
+    width: 90%;
+    margin: 20px auto;
+    float: none;
+}
+
+/* FIX: Center the form */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+/* FIX: Style form groups */
+form p {
+    margin-bottom: 12px;
+    text-align: left;
+}
+
+/* FIX: Label styling */
+label {
+    display: inline-block;
+    width: 100px;
+    font-weight: bold;
+}
+
+/* Light header */
+header {
+    background-color: rgba(240, 240, 240, 0.95);
+    padding: 15px 0;
+}
+
+/* Purple navigation text */
+nav ul li a {
+    color: purple;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #8B00FF;
+    text-decoration: underline;
+}
+
+/* Logo color */
+h1.logo a {
+    color: purple;
+    text-decoration: none;
+}
+
+h1.logo a:hover {
+    color: #8B00FF;
+}
+
+/* Form field styling */
+input[type="text"], input[type="email"], select {
+    width: 250px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Button styling */
+button, input[type="submit"], input[type="reset"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+input[type="reset"] {
+    background-color: #f44336;
+}
+
+input[type="reset"]:hover {
+    background-color: #da190b;
+}
+</style>
+</head>
+<body>
+
+<header container class="siteHeader">
+<div row>
+<h1 column=4 class="logo"><a href="index.php">My Final Project</a></h1>
+<nav column="8" class="nav">
+<ul>
+<li><a href="index.php">Home</a></li>
+<li><a href="display.php">View Records</a></li>
+<li><a href="compare.php">Compare</a></li>
+<li><a href="tracker.php">Tracker</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<main container class="siteContent">
+<!-- BEGIN CHANGEABLE CONTENT. -->
